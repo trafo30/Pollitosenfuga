@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dwbhc735u75mq"]
+[gd_scene load_steps=29 format=3 uid="uid://dwbhc735u75mq"]
 
 [ext_resource type="Texture2D" uid="uid://ceirom3dvrn53" path="res://Rocky Roads/Backgrounds/fondo.webp" id="1_1h6rt"]
 [ext_resource type="Texture2D" uid="uid://dor20s8548ii7" path="res://Rocky Roads/Backgrounds/mountains_a.png" id="1_2uqso"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://36umdef0vas" path="res://scenes/bear_enemy.tscn" id="14_rmflp"]
 [ext_resource type="PackedScene" uid="uid://o4ar2paau3x2" path="res://scenes/coin.tscn" id="16_755ne"]
 [ext_resource type="PackedScene" uid="uid://sc0bhuek8ah" path="res://scenes/apple.tscn" id="17_irmjn"]
+[ext_resource type="Script" path="res://UI.gd" id="18_c8q5i"]
 [ext_resource type="Texture2D" uid="uid://dp4sdm04y782d" path="res://Rocky Roads/Objects/coin_small_gold.png" id="18_uuhtk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lcrm1"]
@@ -499,6 +500,13 @@ sources/5 = SubResource("TileSetAtlasSource_ygmmr")
 sources/6 = SubResource("TileSetAtlasSource_0tnu7")
 sources/7 = SubResource("TileSetAtlasSource_27xm7")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ir05"]
+bg_color = Color(0.0784314, 0.705882, 0.509804, 0.552941)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Fondo" type="Sprite2D" parent="."]
@@ -682,7 +690,7 @@ scale = Vector2(1.1014, 0.865002)
 texture = ExtResource("2_pg57t")
 
 [node name="TreeB39" type="Sprite2D" parent="MountainsA/TreeB38"]
-position = Vector2(156.759, 6.91891)
+position = Vector2(154.936, 2.47102)
 scale = Vector2(1.37988, 1.32832)
 texture = ExtResource("2_pg57t")
 
@@ -911,9 +919,54 @@ scale = Vector2(1.04179, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
+script = ExtResource("18_c8q5i")
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(-143, -241)
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_left = 1065.0
+offset_top = -159.0
+offset_right = 1127.0
+offset_bottom = -128.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0ir05")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Panel"]
+position = Vector2(15, 15)
 scale = Vector2(2.25, 2.25)
 texture = ExtResource("18_uuhtk")
 hframes = 6
+<<<<<<< Updated upstream
+=======
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 2.0
+offset_right = 36.0
+offset_bottom = 25.0
+text = ":"
+
+[node name="coinscolected" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 4.0
+offset_right = 51.0
+offset_bottom = 27.0
+text = "00"
+
+[node name="Apple2" parent="." instance=ExtResource("17_irmjn")]
+position = Vector2(507, -153)
+
+[node name="Apple3" parent="." instance=ExtResource("17_irmjn")]
+position = Vector2(523, -153)
+
+[node name="Apple4" parent="." instance=ExtResource("17_irmjn")]
+position = Vector2(539, -152)
+
+[node name="coin4" parent="." instance=ExtResource("16_755ne")]
+position = Vector2(844, -187)
+
+[node name="coin5" parent="." instance=ExtResource("16_755ne")]
+position = Vector2(282, -123)
+
+[node name="coin6" parent="." instance=ExtResource("16_755ne")]
+position = Vector2(280, -136)
+>>>>>>> Stashed changes
