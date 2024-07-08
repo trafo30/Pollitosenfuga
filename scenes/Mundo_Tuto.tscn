@@ -507,7 +507,7 @@ scale = Vector2(0.931362, 0.962891)
 texture = ExtResource("1_1h6rt")
 
 [node name="MountainsA" type="Sprite2D" parent="."]
-position = Vector2(384, -145)
+position = Vector2(385, -145)
 scale = Vector2(6.59375, 2.18946)
 texture = ExtResource("1_2uqso")
 
@@ -747,7 +747,7 @@ scale = Vector2(0.271722, 1.22034)
 texture = ExtResource("2_pg57t")
 
 [node name="TreeB43" type="Sprite2D" parent="MountainsA"]
-position = Vector2(100.701, 36.082)
+position = Vector2(100.701, 28.3175)
 scale = Vector2(0.271722, 1.22034)
 texture = ExtResource("2_pg57t")
 
@@ -757,7 +757,22 @@ scale = Vector2(0.230649, 0.881354)
 texture = ExtResource("2_pg57t")
 
 [node name="TreeB45" type="Sprite2D" parent="MountainsA"]
-position = Vector2(78.1043, 44.76)
+position = Vector2(78.7109, 42.933)
+scale = Vector2(0.216431, 0.740411)
+texture = ExtResource("2_pg57t")
+
+[node name="TreeB46" type="Sprite2D" parent="MountainsA"]
+position = Vector2(103.886, 43.3897)
+scale = Vector2(0.216431, 0.740411)
+texture = ExtResource("2_pg57t")
+
+[node name="TreeB47" type="Sprite2D" parent="MountainsA"]
+position = Vector2(106.919, 42.933)
+scale = Vector2(0.216431, 0.740411)
+texture = ExtResource("2_pg57t")
+
+[node name="TreeB48" type="Sprite2D" parent="MountainsA"]
+position = Vector2(109.801, 43.3897)
 scale = Vector2(0.216431, 0.740411)
 texture = ExtResource("2_pg57t")
 
